@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850">
+  <defs>
+    <filter id="hpShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Clean crisp background -->
+  <rect width="1200" height="850" fill="#f8fafc"/>
+
+  <!-- Main Certificate Canvas -->
+  <rect x="30" y="30" width="1140" height="790" rx="4" fill="#ffffff" filter="url(#hpShadow)"/>
+
+  <!-- Diagonal Geometric Accent: Top-Left Cyan/Blue Triangle (matching HP LIFE layout) -->
+  <path d="M 30 30 L 180 30 L 30 620 Z" fill="#0066d4"/>
+  <path d="M 30 30 L 100 30 L 30 380 Z" fill="#0096d6" opacity="0.8"/>
+
+  <!-- Diagonal Geometric Accent: Bottom-Right Deep Blue Triangle -->
+  <path d="M 1170 820 L 1000 820 L 1170 540 Z" fill="#0066d4"/>
+  <path d="M 1170 820 L 1070 820 L 1170 680 Z" fill="#004c9e"/>
+
+  <!-- Top Brand Mark: HP LIFE | HP Foundation -->
+  <g transform="translate(430, 90)">
+    <!-- HP Circular Badge -->
+    <circle cx="26" cy="26" r="26" fill="#0066d4"/>
+    <text x="26" y="35" text-anchor="middle" font-family="'Franklin Gothic Medium', Arial, sans-serif" font-style="italic" font-weight="900" font-size="28" fill="#ffffff">hp</text>
+    <text x="64" y="34" font-family="system-ui, sans-serif" font-weight="700" font-size="20" fill="#0f172a" letter-spacing="1">LIFE</text>
+
+    <!-- Divider pipe -->
+    <line x1="140" y1="6" x2="140" y2="44" stroke="#cbd5e1" stroke-width="2"/>
+
+    <!-- HP Foundation -->
+    <circle cx="176" cy="26" r="26" fill="#0066d4"/>
+    <text x="176" y="35" text-anchor="middle" font-family="'Franklin Gothic Medium', Arial, sans-serif" font-style="italic" font-weight="900" font-size="28" fill="#ffffff">hp</text>
+    <text x="214" y="34" font-family="system-ui, sans-serif" font-weight="600" font-size="20" fill="#475569">Foundation</text>
+  </g>
+
+  <!-- Certificate Title -->
+  <text x="600" y="210" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="44" fill="#0f172a">Certificate of Completion</text>
+
+  <!-- Recipient Name -->
+  <text x="600" y="295" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="42" fill="#0f172a">Anirban Bhowmik</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="20" fill="#475569">
+    has successfully completed the HP LIFE online course
+  </text>
+
+  <!-- Course Title -->
+  <text x="600" y="405" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="30" fill="#0f172a">
+    Strategic Planning in the AI Age
+  </text>
+
+  <!-- Paragraph Text (exact wording from certificate) -->
+  <text x="600" y="460" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="15" fill="#334155">
+    By completing this course, the above-named student has learned how to use strategic planning to make
+  </text>
+  <text x="600" y="485" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="15" fill="#334155">
+    better business decisions in an AI-driven world. They have learned about the core components of a strategic
+  </text>
+  <text x="600" y="510" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="15" fill="#334155">
+    plan, discovered how to evaluate practical planning frameworks, and developed the skills to use AI tools to
+  </text>
+  <text x="600" y="535" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="15" fill="#334155">
+    support strategic thinking.
+  </text>
+
+  <!-- Presentation Date -->
+  <text x="600" y="585" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="500" font-size="16" fill="#0f172a">
+    Presented 9/13/2026
+  </text>
+
+  <!-- Executive Signature Line -->
+  <g transform="translate(480, 620)">
+    <!-- Signature vector matching Michele Malejki -->
+    <path d="M 40 40 Q 60 10 70 35 Q 85 5 105 35 Q 120 15 145 35 Q 170 10 190 35 L 220 38" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="20" y1="52" x2="220" y2="52" stroke="#94a3b8" stroke-width="1"/>
+    <text x="120" y="74" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="16" fill="#0f172a">Michele Malejki</text>
+    <text x="120" y="96" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="14" fill="#64748b">Executive Director, HP Foundation</text>
+  </g>
+
+  <!-- Serial Number Footer -->
+  <text x="600" y="775" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="13" fill="#64748b">
+    Certificate serial number: <tspan font-family="'Courier New', monospace" font-weight="700" fill="#0066d4">fc29e5c9-44f2-4ecc-a174-22161fdf07d0</tspan>
+  </text>
+</svg>

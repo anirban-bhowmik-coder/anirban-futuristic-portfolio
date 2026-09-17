@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850">
+  <defs>
+    <filter id="tataShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="850" fill="#0c1e36"/>
+
+  <!-- Certificate Canvas -->
+  <rect x="40" y="40" width="1120" height="770" rx="8" fill="#ffffff" filter="url(#tataShadow)"/>
+
+  <!-- Top Blue Accent Header Bar -->
+  <rect x="40" y="40" width="1120" height="14" fill="#005a9c"/>
+
+  <!-- Tata Brand Header -->
+  <g transform="translate(100, 110)">
+    <circle cx="24" cy="24" r="24" fill="#005a9c"/>
+    <text x="24" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="20" fill="#ffffff">T</text>
+    <text x="60" y="32" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="30" fill="#005a9c" letter-spacing="3">TATA</text>
+    <text x="62" y="52" font-family="system-ui, sans-serif" font-weight="600" font-size="13" fill="#64748b">TATA GROUP</text>
+  </g>
+
+  <!-- Forage Co-Branding -->
+  <g transform="translate(940, 110)">
+    <text font-family="system-ui, sans-serif" font-weight="800" font-size="24" fill="#1e293b" letter-spacing="1">FORAGE</text>
+    <text x="0" y="24" font-family="system-ui, sans-serif" font-weight="500" font-size="12" fill="#64748b">Virtual Experience Program</text>
+  </g>
+
+  <!-- Certificate Title -->
+  <text x="600" y="240" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="38" fill="#0f172a">
+    Certificate of Completion
+  </text>
+  <text x="600" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="500" font-size="18" fill="#64748b">
+    This certifies that
+  </text>
+
+  <!-- Recipient -->
+  <text x="600" y="360" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="44" fill="#005a9c">
+    Anirban Bhowmik
+  </text>
+  <line x1="400" y1="385" x2="800" y2="385" stroke="#005a9c" stroke-width="3"/>
+
+  <!-- Program Name -->
+  <text x="600" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="26" fill="#0f172a">
+    Data Analytics Job Simulation
+  </text>
+
+  <!-- Description -->
+  <text x="600" y="500" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="16" fill="#334155">
+    Completed practical tasks in exploratory data analysis, visual storytelling for C-level executives,
+  </text>
+  <text x="600" y="528" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="16" fill="#334155">
+    scenario-based business metrics, and strategic executive scenario planning.
+  </text>
+
+  <!-- Metadata and Signatures -->
+  <g transform="translate(100, 640)">
+    <text font-family="system-ui, sans-serif" font-weight="700" font-size="16" fill="#0f172a">Issued: October 2025</text>
+    <text y="22" font-family="system-ui, sans-serif" font-weight="400" font-size="13" fill="#64748b">Verification Serial: TATA-EDA-2025-FORAGE</text>
+  </g>
+
+  <g transform="translate(860, 620)">
+    <path d="M 0 30 Q 35 10 70 30 T 140 18 Q 170 35 190 20" fill="none" stroke="#005a9c" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="48" x2="200" y2="48" stroke="#cbd5e1" stroke-width="1"/>
+    <text y="68" font-family="system-ui, sans-serif" font-weight="700" font-size="14" fill="#0f172a">Tata Insights &amp; Analytics</text>
+    <text y="86" font-family="system-ui, sans-serif" font-weight="400" font-size="12" fill="#64748b">Executive Delivery Practice</text>
+  </g>
+</svg>

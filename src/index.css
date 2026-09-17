@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap");
+
+:root {
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+  color: #111114;
+  background-color: #f4f1eb;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-mono {
+  font-family: 'DM Mono', monospace;
+}
+
+.dot-grid {
+  background-image: radial-gradient(#777 0.8px, transparent 0.8px);
+  background-size: 20px 20px;
+  opacity: 0.35;
+  mask-image: linear-gradient(#000, transparent 95%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+

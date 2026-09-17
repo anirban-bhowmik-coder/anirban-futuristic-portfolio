@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 980" width="1400" height="980">
+  <defs>
+    <filter id="confShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <linearGradient id="goldBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="50%" stop-color="#aa771c"/>
+      <stop offset="100%" stop-color="#dfba4e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Parchment Canvas -->
+  <rect width="1400" height="980" fill="#fdfbf7"/>
+
+  <!-- Ornate Outer Border -->
+  <rect x="25" y="25" width="1350" height="930" fill="none" stroke="#c59b27" stroke-width="8"/>
+  <rect x="35" y="35" width="1330" height="910" fill="none" stroke="#8c1d2e" stroke-width="2"/>
+  <rect x="42" y="42" width="1316" height="896" fill="none" stroke="#c59b27" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Corner Flourishes -->
+  <g fill="#c59b27">
+    <rect x="25" y="25" width="30" height="30"/>
+    <rect x="1345" y="25" width="30" height="30"/>
+    <rect x="25" y="925" width="30" height="30"/>
+    <rect x="1345" y="925" width="30" height="30"/>
+  </g>
+
+  <!-- Header Institution Logos -->
+  <!-- IILM University -->
+  <g transform="translate(100, 80)">
+    <text font-family="'Times New Roman', serif" font-weight="900" font-size="24" fill="#0f172a" letter-spacing="3">IILM UNIVERSITY</text>
+    <text x="50" y="24" font-family="system-ui, sans-serif" font-weight="400" font-size="14" fill="#475569" letter-spacing="1">Greater Noida</text>
+  </g>
+
+  <!-- Liwa University -->
+  <g transform="translate(480, 75)">
+    <rect x="0" y="0" width="36" height="42" rx="4" fill="#1e3a8a"/>
+    <text x="18" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="900" font-size="16" fill="#ffffff">LU</text>
+    <text x="44" y="20" font-family="system-ui, sans-serif" font-weight="700" font-size="15" fill="#0f172a">Liwa University</text>
+    <text x="44" y="36" font-family="system-ui, sans-serif" font-weight="400" font-size="11" fill="#64748b">Est 1993</text>
+  </g>
+
+  <!-- IEEE UP Section Co-Sponsorship Badge -->
+  <g transform="translate(1020, 68)">
+    <text x="60" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#64748b" letter-spacing="0.5">Technically Co-Sponsored by</text>
+    <!-- IEEE Diamond -->
+    <path d="M 20 40 L 40 20 L 60 40 L 40 60 Z" fill="#00629b"/>
+    <text x="60" y="44" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="22" fill="#00629b" letter-spacing="1">IEEE</text>
+    <text x="60" y="60" font-family="system-ui, sans-serif" font-weight="700" font-size="10" fill="#1e293b" letter-spacing="1">UP SECTION (INDIA)</text>
+  </g>
+
+  <!-- Deep Maroon Conference Banner -->
+  <g transform="translate(80, 160)">
+    <rect width="1240" height="120" rx="6" fill="#751122"/>
+    <text x="620" y="46" text-anchor="middle" font-family="'Times New Roman', serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="3">
+      INTERNATIONAL CONFERENCE
+    </text>
+    <text x="620" y="74" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="16" fill="#f8fafc" letter-spacing="2">
+      on
+    </text>
+    <text x="620" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="17" fill="#fef08a" letter-spacing="0.5">
+      Intelligent Systems In Engineering, Secured Systems &amp; Cybersecurity (ICISESSC-2026)
+    </text>
+  </g>
+
+  <!-- Certificate Heading -->
+  <text x="700" y="340" text-anchor="middle" font-family="'Times New Roman', serif" font-weight="900" font-size="44" fill="#1e293b" letter-spacing="2">
+    CERTIFICATE OF APPRECIATION
+  </text>
+  <text x="700" y="380" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="20" fill="#64748b">
+    This is to certify that
+  </text>
+
+  <!-- Recipient Name in Prestigious Calligraphic Font -->
+  <text x="700" y="460" text-anchor="middle" font-family="'Brush Script MT', 'Lucida Handwriting', Georgia, serif" font-size="64" fill="#0f172a">
+    Anirban Bhowmik
+  </text>
+  <line x1="450" y1="480" x2="950" y2="480" stroke="#c59b27" stroke-width="1.5"/>
+
+  <!-- Appreciation Body Statement -->
+  <text x="700" y="525" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="500" font-size="17" fill="#1e293b">
+    has actively contributed as a <tspan font-weight="800" fill="#751122">Student Volunteer</tspan> in the “International Conference on Intelligent Systems in
+  </text>
+  <text x="700" y="555" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="500" font-size="17" fill="#1e293b">
+    Engineering, Communications, Secured Systems and Cyber security (ICISESSC-2026)”,
+  </text>
+  <text x="700" y="585" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="600" font-size="17" fill="#0f172a">
+    organized during April 9–10, 2026 at IILM University, Greater Noida.
+  </text>
+  <text x="700" y="625" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="16" fill="#475569">
+    Their dedication, support, and valuable efforts contributed significantly to the successful organization of the conference.
+  </text>
+
+  <!-- Four Faculty Signatures (Exact layout from certificate image) -->
+  <g transform="translate(100, 750)">
+    <!-- Signature 1: Dr. Swati Vashisht -->
+    <g transform="translate(0, 0)">
+      <path d="M 10 30 Q 35 5 50 35 Q 80 10 110 30 L 130 20" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="0" y1="45" x2="240" y2="45" stroke="#cbd5e1" stroke-width="1"/>
+      <text y="65" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#0f172a">Dr. Swati Vashisht</text>
+      <text y="82" font-family="system-ui, sans-serif" font-weight="500" font-size="11" fill="#475569">School of Computer Science &amp; Eng.</text>
+      <text y="98" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#751122">Organizing Co-Chair, ICISESSC-2026</text>
+    </g>
+
+    <!-- Signature 2: Dr. Deependra Rastogi -->
+    <g transform="translate(320, 0)">
+      <path d="M 10 35 Q 30 10 60 25 T 100 15 Q 120 40 140 25" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+      <line x1="0" y1="45" x2="240" y2="45" stroke="#cbd5e1" stroke-width="1"/>
+      <text y="65" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#0f172a">Dr. Deependra Rastogi</text>
+      <text y="82" font-family="system-ui, sans-serif" font-weight="500" font-size="11" fill="#475569">School of Computer Science &amp; Eng.</text>
+      <text y="98" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#751122">Organizing Co-Chair, ICISESSC-2026</text>
+    </g>
+
+    <!-- Signature 3: Prof. (Dr.) Alok Aggarwal -->
+    <g transform="translate(640, 0)">
+      <path d="M 15 30 Q 35 5 70 30 Q 90 5 110 35 Q 130 10 150 28" fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="0" y1="45" x2="240" y2="45" stroke="#cbd5e1" stroke-width="1"/>
+      <text y="65" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#0f172a">Prof. (Dr.) Alok Aggarwal</text>
+      <text y="82" font-family="system-ui, sans-serif" font-weight="500" font-size="11" fill="#475569">Dean, School of Computer Science &amp; Eng.</text>
+      <text y="98" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#751122">General Chair, ICISESSC-2026</text>
+    </g>
+
+    <!-- Signature 4: Dr. Munish Sabharwal -->
+    <g transform="translate(960, 0)">
+      <path d="M 20 40 Q 40 10 70 30 Q 90 8 110 35 L 130 30" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="0" y1="45" x2="240" y2="45" stroke="#cbd5e1" stroke-width="1"/>
+      <text y="65" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#0f172a">Dr. Munish Sabharwal</text>
+      <text y="82" font-family="system-ui, sans-serif" font-weight="500" font-size="11" fill="#475569">Director, School of Computer Science &amp; Eng.</text>
+      <text y="98" font-family="system-ui, sans-serif" font-weight="600" font-size="11" fill="#751122">General Chair, ICISESSC-2026</text>
+    </g>
+  </g>
+</svg>

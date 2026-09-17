@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850">
+  <defs>
+    <filter id="deloitteShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="850" fill="#0f172a"/>
+
+  <!-- Certificate Canvas -->
+  <rect x="40" y="40" width="1120" height="770" rx="8" fill="#ffffff" filter="url(#deloitteShadow)"/>
+
+  <!-- Subtle grid pattern line on top -->
+  <rect x="40" y="40" width="1120" height="12" fill="#86bc25"/>
+
+  <!-- Deloitte Brand Header -->
+  <g transform="translate(100, 110)">
+    <text font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" fill="#000000">Deloitte<tspan fill="#86bc25">.</tspan></text>
+    <text x="2" y="32" font-family="system-ui, sans-serif" font-weight="600" font-size="14" fill="#475569">Australia</text>
+  </g>
+
+  <!-- Forage Co-Branding -->
+  <g transform="translate(940, 110)">
+    <text font-family="system-ui, sans-serif" font-weight="800" font-size="24" fill="#1e293b" letter-spacing="1">FORAGE</text>
+    <text x="0" y="24" font-family="system-ui, sans-serif" font-weight="500" font-size="12" fill="#64748b">Virtual Experience Program</text>
+  </g>
+
+  <!-- Certificate Title -->
+  <text x="600" y="240" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="38" fill="#0f172a">
+    Certificate of Completion
+  </text>
+  <text x="600" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="500" font-size="18" fill="#64748b">
+    This certifies that
+  </text>
+
+  <!-- Recipient -->
+  <text x="600" y="360" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="44" fill="#000000">
+    Anirban Bhowmik
+  </text>
+  <line x1="400" y1="385" x2="800" y2="385" stroke="#86bc25" stroke-width="3"/>
+
+  <!-- Program Name -->
+  <text x="600" y="440" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="26" fill="#0f172a">
+    Data Analytics Job Simulation
+  </text>
+
+  <!-- Description -->
+  <text x="600" y="500" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="16" fill="#334155">
+    Successfully completed practical tasks involving data exploration, dashboard architecture, forensic data insights,
+  </text>
+  <text x="600" y="528" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="400" font-size="16" fill="#334155">
+    telemetry hygiene, and communicating analytical findings to senior client leadership.
+  </text>
+
+  <!-- Metadata and Signatures -->
+  <g transform="translate(100, 640)">
+    <text font-family="system-ui, sans-serif" font-weight="700" font-size="16" fill="#0f172a">Issued: October 22, 2025</text>
+    <text y="22" font-family="system-ui, sans-serif" font-weight="400" font-size="13" fill="#64748b">Verification Serial: DEL-AU-2025-FORAGE</text>
+  </g>
+
+  <g transform="translate(860, 620)">
+    <path d="M 0 35 Q 30 10 65 30 T 130 15 Q 160 40 190 20" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="0" y1="48" x2="200" y2="48" stroke="#cbd5e1" stroke-width="1"/>
+    <text y="68" font-family="system-ui, sans-serif" font-weight="700" font-size="14" fill="#0f172a">Deloitte Australia Practice</text>
+    <text y="86" font-family="system-ui, sans-serif" font-weight="400" font-size="12" fill="#64748b">Analytics &amp; Forensic Advisory</text>
+  </g>
+</svg>

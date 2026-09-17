@@ -1,54 +1,68 @@
-# Anirban Bhowmik — Futuristic 3D Portfolio
+<div align="center">
 
-A single repository combining three layers:
+# 🧑‍💻 ANIRBAN BHOWMIK
 
-### 1. UI UX Pro Max
-Design intelligence for the visual system. Install its current Claude skill with:
-```powershell
-npm install -g uipro-cli
-uipro init --ai claude
-```
+### `CSE STUDENT` • `AI/ML` • `BUILDER` • `EXPLORER`
 
-### 2. 21st.dev
-Use 21st.dev as a component source. Copy selected components into:
-`src/components/ui/`
-Then customize them to the Anirban design system. It is not a required runtime dependency.
+<img src="https://capsule-render.vercel.app/api?type=waving&height=180&color=0:0f172a,50:1e293b,100:020617&text=BUILD.%20LEARN.%20INNOVATE.&fontColor=ffffff&fontSize=32&fontAlignY=40&animation=twinkling&fontAlign=50" width="100%"/>
 
-### 3. Motion
-The project uses the current `motion` package:
-```ts
-import { motion } from "motion/react";
-```
+<br/>
 
-### 4. Three.js
-React Three Fiber + Drei power the kinetic 3D mesh.
+<a href="https://anirban-futuristic-portfolio.vercel.app/">
+  <img src="https://img.shields.io/badge/🌐_LIVE_PORTFOLIO-Visit_Now-0f172a?style=for-the-badge&logo=vercel&logoColor=white" />
+</a>
 
-## Run
+<a href="https://github.com/anirban-bhowmik-coder">
+  <img src="https://img.shields.io/badge/GITHUB-ANIRBAN--BHOWMIK-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
 
-```powershell
-npm install
-npm run dev
-```
+</div>
 
-Then open the Vite URL, normally `http://localhost:5173/`.
+---
 
-## Build
+<div align="center">
 
-```powershell
-npm run build
-```
+## ◈ `01` — WHO AM I?
 
-## Claude Code
+</div>
 
-Open this repository in VS Code and let Claude inspect:
-- `.claude/CLAUDE.md`
-- `design-system.md`
-- `src/`
-- `package.json`
+<table>
+<tr>
+<td width="55%">
 
-Then give Claude the portfolio master prompt.
+### 👋 Hey, I'm Anirban
 
-## Important
+I'm a **Computer Science & Engineering student** specializing in **Artificial Intelligence & Machine Learning**.
 
-Do not add KIRO as a separate project. The current project name is KineticMesh.
-Do not invent certification details or project features.
+I enjoy turning ideas into interactive software, experimenting with modern technologies, and learning by building.
+
+> **"I don't just learn technology. I build with it."**
+
+Currently exploring:
+
+- 🤖 Artificial Intelligence
+- 🧠 Machine Learning
+- ✨ Generative AI
+- 📊 Data Structures & Algorithms
+- 💻 C++ & Python
+- 🌐 Full-Stack Web Development
+- 🎨 Interactive 3D Web Experiences
+
+</td>
+
+<td width="45%">
+
+```text
+╔══════════════════════════╗
+║      ANIRBAN.EXE         ║
+╠══════════════════════════╣
+║                          ║
+║  🎓 CSE Student          ║
+║  🧠 AI / ML              ║
+║  💻 Developer            ║
+║  🚀 Builder              ║
+║  🔬 Learner              ║
+║                          ║
+║  STATUS: BUILDING...     ║
+║                          ║
+╚══════════════════════════╝

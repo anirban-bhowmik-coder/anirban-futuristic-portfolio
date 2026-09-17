@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
-  ShieldCheck,
   Lock,
   Unlock,
   KeyRound,
@@ -16,7 +15,6 @@ import {
   authenticateOwner,
   logoutOwner,
   isOwnerAuthenticated,
-  DEFAULT_MASTER_PASSCODE,
   OWNER_NAME,
   OWNER_EMAIL
 } from "../../utils/ownerAuth";
@@ -67,7 +65,6 @@ export function OwnerAuthModal({ isOpen, onClose, onSuccess }: OwnerAuthModalPro
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-        {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -76,7 +73,6 @@ export function OwnerAuthModal({ isOpen, onClose, onSuccess }: OwnerAuthModalPro
           className="fixed inset-0 bg-black/80 backdrop-blur-md"
         />
 
-        {/* Modal Container */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -84,7 +80,6 @@ export function OwnerAuthModal({ isOpen, onClose, onSuccess }: OwnerAuthModalPro
           transition={{ duration: 0.2 }}
           className="relative w-full max-w-md bg-[#111118] border border-[#2d2d3e] rounded-2xl shadow-2xl overflow-hidden z-10 text-[#f4f1eb]"
         >
-          {/* Header */}
           <div className="p-5 border-b border-[#222232] flex items-center justify-between bg-[#151520]">
             <div className="flex items-center gap-2.5">
               <div className="p-2 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/20">
@@ -108,7 +103,6 @@ export function OwnerAuthModal({ isOpen, onClose, onSuccess }: OwnerAuthModalPro
           </div>
 
           <div className="p-6 space-y-5">
-            {/* Identity badge */}
             <div className="p-3.5 rounded-xl bg-[#181824] border border-[#29293d] flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-orange-500/15 border border-orange-500/30 flex items-center justify-center text-orange-400 shrink-0">
                 <UserCheck size={20} />
@@ -122,12 +116,10 @@ export function OwnerAuthModal({ isOpen, onClose, onSuccess }: OwnerAuthModalPro
               </div>
             </div>
 
-            {/* Explanation */}
             <p className="text-xs font-mono text-[#9999aa] leading-relaxed">
               To protect verified credentials from unauthorized changes, document uploads and edits are restricted. Recruiter and public visitors have strict <strong>read-only</strong> inspection access.
             </p>
 
-            {/* State: Already Authenticated */}
             {isCurrentlyOwner ? (
               <div className="space-y-4 pt-1">
                 <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono flex items-start gap-3">
@@ -155,7 +147,6 @@ export function OwnerAuthModal({ isOpen, onClose, onSuccess }: OwnerAuthModalPro
                 </div>
               </div>
             ) : (
-              /* State: Login Form */
               <form onSubmit={handleLogin} className="space-y-4">
                 <div className="space-y-1.5">
                   <label className="text-xs font-mono text-[#aaaaee] block font-semibold">
@@ -169,7 +160,7 @@ export function OwnerAuthModal({ isOpen, onClose, onSuccess }: OwnerAuthModalPro
                       type={showPassword ? "text" : "password"}
                       value={passcode}
                       onChange={(e) => setPasscode(e.target.value)}
-                      placeholder="Enter passkey (e.g. anirban2026)"
+                      placeholder="Enter secret owner passkey"
                       className="w-full pl-9 pr-10 py-2.5 rounded-xl bg-[#161622] border border-[#2e2e42] focus:border-orange-500 focus:outline-none text-white text-xs font-mono placeholder:text-[#555566]"
                       autoFocus
                     />
@@ -181,9 +172,6 @@ export function OwnerAuthModal({ isOpen, onClose, onSuccess }: OwnerAuthModalPro
                       {showPassword ? <EyeOff size={15} /> : <Eye size={15} />}
                     </button>
                   </div>
-                  <p className="text-[10px] font-mono text-[#777788] pt-1">
-                    Default Master Passkey: <code className="text-orange-400 bg-orange-500/10 px-1.5 py-0.5 rounded font-bold">{DEFAULT_MASTER_PASSCODE}</code>
-                  </p>
                 </div>
 
                 {errorMsg && (

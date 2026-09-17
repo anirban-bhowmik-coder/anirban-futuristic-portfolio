@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 const OWNER_TOKEN_KEY = "anirban_portfolio_owner_token";
 const OWNER_PASSCODE_KEY = "anirban_portfolio_owner_passcode";
 
-// Default Master Passkey for Anirban Bhowmik
-export const DEFAULT_MASTER_PASSCODE = "anirban2026";
+// Private Passkey for Anirban Bhowmik
+export const DEFAULT_MASTER_PASSCODE = "ayan12389*";
 export const OWNER_EMAIL = "anirbanboy905@gmail.com";
 export const OWNER_NAME = "Anirban Bhowmik";
 
@@ -20,7 +20,6 @@ export function isOwnerAuthenticated(): boolean {
   try {
     const token = localStorage.getItem(OWNER_TOKEN_KEY);
     if (!token) return false;
-    // Check if token matches active session signature
     return token === "verified_owner_anirban_bhowmik";
   } catch {
     return false;
@@ -31,28 +30,23 @@ export function authenticateOwner(enteredPasscode: string): { success: boolean; 
   const currentPasscode = getStoredOwnerPasscode();
   const trimmed = enteredPasscode.trim();
 
-  // Allow either current passcode, default master passcode, or owner security key
-  if (
-    trimmed === currentPasscode ||
-    trimmed === DEFAULT_MASTER_PASSCODE ||
-    trimmed.toLowerCase() === "anirban" ||
-    trimmed.toLowerCase() === "anirban905"
-  ) {
+  // Strictly verify against the secret owner passkey
+  if (trimmed === currentPasscode || trimmed === DEFAULT_MASTER_PASSCODE) {
     try {
       localStorage.setItem(OWNER_TOKEN_KEY, "verified_owner_anirban_bhowmik");
       window.dispatchEvent(new Event("owner-auth-changed"));
       return {
         success: true,
-        message: "Owner access verified successfully. Welcome, Anirban!"
+        message: "Owner access verified. Welcome, Anirban!"
       };
-    } catch (e) {
+    } catch {
       return { success: false, message: "Storage access denied." };
     }
   }
 
   return {
     success: false,
-    message: "Invalid passkey. Only Anirban Bhowmik is authorized to modify portfolio documents."
+    message: "Access denied. Invalid passkey."
   };
 }
 
@@ -75,9 +69,6 @@ export function updateOwnerPasscode(newPasscode: string): boolean {
   }
 }
 
-/**
- * Custom React hook for component-level reactivity to Owner Mode
- */
 export function useOwnerAuth() {
   const [isOwner, setIsOwner] = useState<boolean>(() => isOwnerAuthenticated());
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);

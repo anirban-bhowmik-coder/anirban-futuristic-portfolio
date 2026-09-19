@@ -24,27 +24,27 @@ export function SkillConstellation() {
   const mapCoord = (val: number, maxRange: number) => ((val + 100) / 200) * maxRange;
 
   return (
-    <div className="w-full bg-[#111114] border border-[#26262e] rounded-2xl p-6 md:p-10 text-[#f4f1eb] shadow-xl overflow-hidden">
+    <div className="w-full bg-[#111114] border border-[#26262e] rounded-2xl p-4 sm:p-6 md:p-10 text-[#f4f1eb] shadow-xl overflow-hidden">
       {/* Top Header & Filter Tabs */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#212128]">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-6 pb-4 sm:pb-6 border-b border-[#212128]">
         <div>
-          <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#00f0ff] mb-2">
+          <div className="flex items-center gap-2 text-xs font-mono tracking-widest uppercase text-[#00f0ff] mb-1 sm:mb-2">
             <Network size={15} />
             <span>Interactive Skill Constellation</span>
           </div>
-          <h3 className="text-2xl md:text-3xl font-semibold tracking-tight">
-            Knowledge Graph & Synergies
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
+            Knowledge Graph &amp; Synergies
           </h3>
           <p className="text-xs text-[#888892] mt-1">
             Click or hover nodes to explore inter-dependencies across systems, AI, and graphics.
           </p>
         </div>
 
-        {/* Category Pills */}
-        <div className="flex flex-wrap gap-2">
+        {/* Category Pills with horizontal scroll on phones */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 no-scrollbar flex-nowrap sm:flex-wrap">
           <button
             onClick={() => setSelectedCategory("all")}
-            className={`px-3.5 py-1.5 text-xs font-mono rounded-full border transition-all ${
+            className={`px-3 py-1.5 text-xs font-mono rounded-full border whitespace-nowrap transition-all cursor-pointer ${
               selectedCategory === "all"
                 ? "bg-[#00f0ff] text-[#111114] font-medium border-[#00f0ff]"
                 : "bg-[#181820] text-[#a0a0aa] border-[#2d2d38] hover:border-[#444455]"
@@ -56,7 +56,7 @@ export function SkillConstellation() {
             <button
               key={cat.id}
               onClick={() => setSelectedCategory(cat.id)}
-              className={`px-3 py-1.5 text-xs font-mono rounded-full border transition-all ${
+              className={`px-3 py-1.5 text-xs font-mono rounded-full border whitespace-nowrap transition-all cursor-pointer ${
                 selectedCategory === cat.id
                   ? "bg-white text-[#111114] font-medium border-white"
                   : "bg-[#181820] text-[#a0a0aa] border-[#2d2d38] hover:border-[#444455]"
@@ -69,9 +69,9 @@ export function SkillConstellation() {
       </div>
 
       {/* Main Grid: Constellation Canvas + Details Inspector */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 mt-5 sm:mt-8 items-center">
         {/* SVG Constellation Network Canvas */}
-        <div className="lg:col-span-8 relative bg-[#0b0b0e] border border-[#1e1e26] rounded-xl p-4 md:p-6 flex items-center justify-center min-h-[380px] md:min-h-[440px] overflow-hidden">
+        <div className="lg:col-span-8 relative bg-[#0b0b0e] border border-[#1e1e26] rounded-xl p-3 sm:p-4 md:p-6 flex items-center justify-center min-h-[250px] sm:min-h-[340px] md:min-h-[440px] overflow-hidden">
           {/* Subtle Ambient Radial Glow */}
           <div className="absolute inset-0 bg-[radial-gradient(#00f0ff_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 

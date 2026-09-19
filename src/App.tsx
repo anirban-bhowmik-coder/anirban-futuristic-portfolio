@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FloatingNav } from "./components/ui/FloatingNav";
+import { MobileQuickNav } from "./components/ui/MobileQuickNav";
 import { HeroSection } from "./components/sections/HeroSection";
 import { AboutSection } from "./components/sections/AboutSection";
 import { WorkSection } from "./components/sections/WorkSection";
@@ -63,6 +64,9 @@ export default function App() {
         isOpen={isResumeOpen}
         onClose={() => setIsResumeOpen(false)}
       />
+
+      {/* Ergonomic Mobile Quick Navigation Dock */}
+      <MobileQuickNav onOpenResume={() => setIsResumeOpen(true)} />
     </div>
   );
 }

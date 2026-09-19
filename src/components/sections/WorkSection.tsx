@@ -33,32 +33,32 @@ export function WorkSection({ onSelectProject }: WorkSectionProps) {
   });
 
   return (
-    <section id="work" className="py-24 md:py-36 px-6 md:px-12 lg:px-20 bg-[#eae6de] text-[#111114]">
+    <section id="work" className="py-12 sm:py-16 md:py-28 lg:py-32 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#eae6de] text-[#111114]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 pb-8 border-b border-[#c8c1b3]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16 pb-6 sm:pb-8 border-b border-[#c8c1b3]">
           <div>
-            <span className="text-xs font-mono tracking-widest text-[#111114] uppercase block mb-3 font-semibold">
+            <span className="text-xs font-mono tracking-widest text-[#111114] uppercase block mb-2 sm:mb-3 font-semibold">
               02 / SELECTED WORK & CASE STUDIES
             </span>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-[0.88]">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-semibold tracking-tight leading-[0.92] sm:leading-[0.88]">
               SPATIAL<br />
               <em className="font-serif italic font-normal text-[#33333e]">COMPUTING.</em>
             </h2>
           </div>
 
           <div className="max-w-md">
-            <p className="text-sm md:text-base text-[#44444e] leading-relaxed mb-4">
+            <p className="text-xs sm:text-sm md:text-base text-[#44444e] leading-relaxed mb-3 sm:mb-4">
               Real engineering implementations across AI/ML pipelines, verifiable forensic algorithms,
               kinetic WebGL shaders, and high-performance frontend architectures.
             </p>
-            {/* Filter Tabs */}
-            <div className="flex flex-wrap gap-1.5">
+            {/* Filter Tabs with horizontal swipe on mobile */}
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 no-scrollbar flex-nowrap sm:flex-wrap">
               {filterCategories.map((filter) => (
                 <button
                   key={filter.id}
                   onClick={() => setActiveFilter(filter.id)}
-                  className={`px-3 py-1.5 text-xs font-mono rounded-full border transition-all ${
+                  className={`px-3 py-1.5 text-xs font-mono rounded-full border whitespace-nowrap transition-all cursor-pointer ${
                     activeFilter === filter.id
                       ? "bg-[#111114] text-[#f4f1eb] border-[#111114] font-medium"
                       : "bg-[#ded8cc] text-[#33333e] border-[#c4bdae] hover:border-[#111114]"
@@ -72,7 +72,7 @@ export function WorkSection({ onSelectProject }: WorkSectionProps) {
         </div>
 
         {/* 3D Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -92,7 +92,7 @@ export function WorkSection({ onSelectProject }: WorkSectionProps) {
         </div>
 
         {/* Notice on KIRO & Authenticity */}
-        <div className="mt-16 pt-8 border-t border-[#c8c1b3] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#666672]">
+        <div className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-[#c8c1b3] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-[#666672]">
           <span className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#111114]" />
             <span>KINETICMESH: CURRENT SYSTEM DESIGNATION</span>

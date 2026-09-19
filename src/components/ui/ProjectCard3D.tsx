@@ -74,7 +74,7 @@ export function ProjectCard3D({ project, index, onSelect }: ProjectCard3DProps) 
           transformStyle: "preserve-3d",
           transition: "transform 0.18s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s ease"
         }}
-        className="relative h-full bg-[#121217] border border-[#26262e] group-hover:border-[#3d3d4a] rounded-2xl p-6 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300"
+        className="relative h-full bg-[#121217] border border-[#26262e] group-hover:border-[#3d3d4a] rounded-2xl p-4 sm:p-6 md:p-8 flex flex-col justify-between overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300"
       >
         {/* Dynamic Specular Glare */}
         <div
@@ -90,9 +90,9 @@ export function ProjectCard3D({ project, index, onSelect }: ProjectCard3DProps) 
         {/* Top Header Row (Elevated in 3D) */}
         <div
           style={{ transform: "translateZ(30px)", transformStyle: "preserve-3d" }}
-          className="flex items-center justify-between gap-4 pb-4 border-b border-[#212128]"
+          className="flex items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-[#212128]"
         >
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2 sm:gap-2.5">
             <span className="text-xs font-mono text-[#666672] font-semibold">
               0{index + 1}
             </span>
@@ -113,15 +113,15 @@ export function ProjectCard3D({ project, index, onSelect }: ProjectCard3DProps) 
         {/* Middle Body (Elevated in 3D) */}
         <div
           style={{ transform: "translateZ(42px)", transformStyle: "preserve-3d" }}
-          className="my-6"
+          className="my-3 sm:my-6"
         >
-          <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-[#f4f1eb] group-hover:text-white transition-colors">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-[#f4f1eb] group-hover:text-white transition-colors">
             {project.name}
           </h3>
-          <p className="mt-2 text-sm text-[#00f0ff]/80 font-light line-clamp-1">
+          <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-[#00f0ff]/80 font-light line-clamp-1">
             {project.tagline}
           </p>
-          <p className="mt-3 text-sm text-[#9b9ba4] leading-relaxed line-clamp-3">
+          <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-[#9b9ba4] leading-relaxed line-clamp-3">
             {project.description}
           </p>
         </div>
@@ -129,13 +129,13 @@ export function ProjectCard3D({ project, index, onSelect }: ProjectCard3DProps) 
         {/* Architecture Spec Snippet */}
         <div
           style={{ transform: "translateZ(25px)" }}
-          className="bg-[#181820] border border-[#24242d] rounded-xl p-3 mb-6"
+          className="bg-[#181820] border border-[#24242d] rounded-xl p-2.5 sm:p-3 mb-4 sm:mb-6"
         >
-          <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-[#f59e0b] mb-1">
+          <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono uppercase tracking-wider text-[#f59e0b] mb-1">
             <Cpu size={12} />
             <span>Core Architecture</span>
           </div>
-          <p className="text-xs text-[#b5b5be] line-clamp-2">
+          <p className="text-[11px] sm:text-xs text-[#b5b5be] line-clamp-2">
             {project.architectureNotes}
           </p>
         </div>
@@ -143,7 +143,7 @@ export function ProjectCard3D({ project, index, onSelect }: ProjectCard3DProps) 
         {/* Bottom Stack & CTA (Elevated in 3D) */}
         <div
           style={{ transform: "translateZ(35px)", transformStyle: "preserve-3d" }}
-          className="pt-4 border-t border-[#212128] flex items-center justify-between gap-2"
+          className="pt-3 sm:pt-4 border-t border-[#212128] flex items-center justify-between gap-2"
         >
           <div className="flex flex-wrap gap-1.5 max-w-[75%]">
             {project.stack.slice(0, 3).map((s) => (

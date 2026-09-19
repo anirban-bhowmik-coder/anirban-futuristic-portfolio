@@ -80,7 +80,7 @@ export function CredentialCard({ credential, onSelect, index }: CredentialCardPr
           })`,
           transition: "transform 0.15s ease-out"
         }}
-        className={`relative h-full rounded-2xl p-6 sm:p-8 cursor-pointer transition-colors duration-300 overflow-hidden flex flex-col justify-between ${
+        className={`relative h-full rounded-2xl p-4 sm:p-6 md:p-8 cursor-pointer transition-colors duration-300 overflow-hidden flex flex-col justify-between ${
           isFeatured
             ? "bg-gradient-to-br from-[#1b1724] via-[#14141e] to-[#121218] border-2 border-[#c74634]/50 hover:border-[#f59e0b] shadow-2xl shadow-[#c74634]/10"
             : "bg-[#14141b] border border-[#272736] hover:border-[#3d3d52] shadow-xl"

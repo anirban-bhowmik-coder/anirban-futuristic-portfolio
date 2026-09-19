@@ -5,22 +5,22 @@ import { portfolioData } from "../../data/portfolio";
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-24 md:py-36 px-6 md:px-12 lg:px-20 bg-[#f4f1eb] text-[#111114]">
+    <section id="skills" className="py-12 sm:py-16 md:py-28 lg:py-32 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#f4f1eb] text-[#111114]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 pb-8 border-b border-[#c8c1b3]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16 pb-6 sm:pb-8 border-b border-[#c8c1b3]">
           <div>
-            <span className="text-xs font-mono tracking-widest text-[#111114] uppercase block mb-3 font-semibold">
+            <span className="text-xs font-mono tracking-widest text-[#111114] uppercase block mb-2 sm:mb-3 font-semibold">
               04 / TECHNICAL CAPABILITIES
             </span>
-            <h2 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight leading-[0.88]">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-semibold tracking-tight leading-[0.92] sm:leading-[0.88]">
               SKILLS &<br />
               <em className="font-serif italic font-normal text-[#33333e]">CONSTELLATION.</em>
             </h2>
           </div>
 
           <div className="max-w-md">
-            <p className="text-sm md:text-base text-[#44444e] leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-[#44444e] leading-relaxed">
               Synthesizing algorithmic foundations (C++, DSA, OOP) with modern artificial intelligence
               and spatial WebGL computing. Evaluated through architectural synergy rather than arbitrary percentages.
             </p>
@@ -31,17 +31,17 @@ export function SkillsSection() {
         <SkillConstellation />
 
         {/* Categorized Honest Proficiency Matrix */}
-        <div className="mt-16 pt-12 border-t border-[#c8c1b3]">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div className="mt-10 sm:mt-16 pt-8 sm:pt-12 border-t border-[#c8c1b3]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div>
               <span className="text-xs font-mono tracking-widest uppercase text-[#55555e] block mb-1">
                 HONEST PROFICIENCY PROFILES · ZERO FABRICATED PERCENTAGES
               </span>
-              <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
                 VERIFIED TECHNICAL SPECTRUM
               </h3>
             </div>
-            <div className="flex flex-wrap gap-2 text-[10px] font-mono">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 text-[10px] font-mono">
               <span className="px-2.5 py-1 rounded bg-green-500/15 text-green-800 border border-green-500/30">
                 • Project Experience
               </span>
@@ -54,9 +54,9 @@ export function SkillsSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {/* Languages */}
-            <div className="bg-[#eae4d6] border border-[#d2cbbe] rounded-2xl p-5 flex flex-col justify-between">
+            <div className="bg-[#eae4d6] border border-[#d2cbbe] rounded-2xl p-4 sm:p-5 flex flex-col justify-between">
               <div>
                 <span className="text-xs font-mono font-bold tracking-wider uppercase text-[#111114] block pb-2 mb-3 border-b border-[#c8c1b3]">
                   LANGUAGES
@@ -189,13 +189,13 @@ export function SkillsSection() {
         </div>
 
         {/* Currently Learning Section */}
-        <div className="mt-20 pt-12 border-t border-[#c8c1b3]">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        <div className="mt-10 sm:mt-16 pt-8 sm:pt-12 border-t border-[#c8c1b3]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div>
               <span className="text-xs font-mono tracking-widest uppercase text-[#55555e] block mb-1">
                 ACTIVE RIGOR · DEEP CURRICULUM
               </span>
-              <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
                 CONTINUOUS LEARNING TRAJECTORY
               </h3>
             </div>
@@ -204,7 +204,7 @@ export function SkillsSection() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-4">
             {portfolioData.currentlyLearning.map((topic, i) => (
               <motion.div
                 key={topic}
@@ -212,15 +212,15 @@ export function SkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
-                className="bg-[#eae4d6] border border-[#d2cbbe] hover:border-[#111114] rounded-xl p-4 flex items-center justify-between transition-colors group"
+                className="bg-[#eae4d6] border border-[#d2cbbe] hover:border-[#111114] rounded-xl p-3 sm:p-4 flex items-center justify-between transition-colors group"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5 sm:gap-3">
                   <span className="w-2 h-2 rounded-full bg-[#111114] group-hover:bg-[#00f0ff] transition-colors" />
-                  <span className="text-xs md:text-sm font-mono font-medium text-[#22222a]">
+                  <span className="text-xs sm:text-sm font-mono font-medium text-[#22222a]">
                     {topic}
                   </span>
                 </div>
-                <Code2 size={15} className="text-[#888892] group-hover:text-[#111114] transition-colors" />
+                <Code2 size={14} className="text-[#888892] group-hover:text-[#111114] transition-colors" />
               </motion.div>
             ))}
           </div>

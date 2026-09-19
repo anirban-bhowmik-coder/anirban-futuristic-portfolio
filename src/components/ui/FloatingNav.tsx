@@ -51,9 +51,9 @@ export function FloatingNav({ onOpenResume }: FloatingNavProps) {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 px-4 md:px-8 py-4 pointer-events-none flex justify-center">
+    <header className="fixed top-0 left-0 right-0 z-40 px-3 sm:px-4 md:px-8 py-2.5 sm:py-4 pointer-events-none flex justify-center">
       <nav
-        className={`pointer-events-auto flex items-center justify-between gap-6 px-4 md:px-6 py-2.5 rounded-full transition-all duration-300 ${
+        className={`pointer-events-auto flex items-center justify-between gap-4 sm:gap-6 px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full transition-all duration-300 ${
           scrolled
             ? "bg-[#111114]/90 backdrop-blur-md border border-[#2b2b36] shadow-xl text-[#f4f1eb]"
             : "bg-[#111114]/80 backdrop-blur-sm border border-[#2b2b36]/60 text-[#f4f1eb]"
@@ -63,7 +63,7 @@ export function FloatingNav({ onOpenResume }: FloatingNavProps) {
         {/* Brand */}
         <button
           onClick={() => scrollToSection("home")}
-          className="flex items-center gap-1.5 font-bold tracking-tight text-sm font-mono text-white group"
+          className="flex items-center gap-1.5 font-bold tracking-tight text-xs sm:text-sm font-mono text-white group cursor-pointer"
         >
           <span className="w-2 h-2 rounded-full bg-[#00f0ff] group-hover:scale-125 transition-transform" />
           <span>AB</span>
@@ -78,7 +78,7 @@ export function FloatingNav({ onOpenResume }: FloatingNavProps) {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative px-3 py-1.5 text-[11px] font-mono tracking-wider transition-colors rounded-full ${
+                className={`relative px-3 py-1.5 text-[11px] font-mono tracking-wider transition-colors rounded-full cursor-pointer ${
                   isActive
                     ? "text-[#00f0ff] font-semibold"
                     : "text-[#a0a0aa] hover:text-[#f4f1eb]"
@@ -98,10 +98,10 @@ export function FloatingNav({ onOpenResume }: FloatingNavProps) {
         </div>
 
         {/* Right Actions: Resume Button & Status indicator */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
             onClick={onOpenResume}
-            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#f4f1eb] hover:bg-white text-[#111114] text-xs font-mono font-medium rounded-full transition-all hover:scale-105"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#f4f1eb] hover:bg-white text-[#111114] text-xs font-mono font-medium rounded-full transition-all hover:scale-105 cursor-pointer"
           >
             <FileText size={13} />
             <span>RESUME</span>
@@ -110,7 +110,7 @@ export function FloatingNav({ onOpenResume }: FloatingNavProps) {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-1.5 text-[#b0b0b8] hover:text-white rounded-md"
+            className="lg:hidden p-1 sm:p-1.5 text-[#b0b0b8] hover:text-white rounded-md cursor-pointer"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -126,14 +126,14 @@ export function FloatingNav({ onOpenResume }: FloatingNavProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.98 }}
             transition={{ duration: 0.2 }}
-            className="pointer-events-auto fixed top-20 left-4 right-4 bg-[#111114] border border-[#2b2b36] rounded-2xl p-6 shadow-2xl z-50 text-[#f4f1eb] lg:hidden"
+            className="pointer-events-auto fixed top-16 sm:top-20 left-3 right-3 sm:left-4 sm:right-4 bg-[#111114] border border-[#2b2b36] rounded-2xl p-4 sm:p-6 shadow-2xl z-50 text-[#f4f1eb] lg:hidden max-h-[80vh] overflow-y-auto"
           >
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1.5">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-left px-4 py-3 text-sm font-mono tracking-wider rounded-xl transition-colors ${
+                  className={`text-left px-3.5 py-2 sm:py-2.5 text-xs sm:text-sm font-mono tracking-wider rounded-xl transition-colors cursor-pointer ${
                     activeSection === item.id
                       ? "bg-[#00f0ff]/10 text-[#00f0ff] font-bold"
                       : "text-[#c0c0ca] hover:bg-white/5"
@@ -143,13 +143,13 @@ export function FloatingNav({ onOpenResume }: FloatingNavProps) {
                 </button>
               ))}
 
-              <div className="pt-4 mt-2 border-t border-[#22222b] flex items-center justify-between">
+              <div className="pt-3 mt-1.5 border-t border-[#22222b] flex items-center justify-between">
                 <button
                   onClick={() => {
                     setMobileMenuOpen(false);
                     onOpenResume();
                   }}
-                  className="w-full py-3 bg-[#f4f1eb] text-[#111114] rounded-xl text-xs font-mono font-bold flex items-center justify-center gap-2"
+                  className="w-full py-2.5 sm:py-3 bg-[#f4f1eb] text-[#111114] rounded-xl text-xs font-mono font-bold flex items-center justify-center gap-2 cursor-pointer hover:bg-white transition-colors"
                 >
                   <FileText size={15} />
                   <span>VIEW FULL RESUME</span>

@@ -52,6 +52,7 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
       setImageError(false);
     };
     testImg.onerror = () => {
+      // If default /images/portrait.png fails, try alternative paths
       if (imageSrc === "/images/portrait.png") {
         const altImg = new Image();
         altImg.onload = () => {
@@ -82,6 +83,7 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
+    // Angle limit: -14 to +14 deg
     const nextRotX = ((y - centerY) / centerY) * -12;
     const nextRotY = ((x - centerX) / centerX) * 12;
 
@@ -129,8 +131,9 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
           localStorage.setItem("anirban_portrait_image", dataUrl);
           setFeedback("Portrait updated and saved successfully in Owner Mode!");
           setTimeout(() => setFeedback(null), 4000);
-        } catch {
-          setFeedback("Portrait updated in memory!");
+        } catch (err) {
+          console.warn("Could not save to localStorage due to size limit", err);
+          setFeedback("Portrait updated in memory! (Storage limit reached, consider downloading portrait.png for Vercel)");
         }
       }
     };
@@ -218,7 +221,7 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
       {/* 3D Perspective Viewport */}
       <div
         style={{ perspective: "1400px" }}
-        className="relative w-full max-w-sm sm:max-w-md aspect-[4/5] cursor-pointer"
+        className="relative w-full max-w-[280px] sm:max-w-sm md:max-w-md aspect-[4/5] cursor-pointer"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -258,7 +261,7 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
           }}
           className="relative w-full h-full rounded-2xl bg-[#111116] border border-[#2a2a36] shadow-2xl overflow-hidden p-2 sm:p-2.5 flex flex-col justify-between"
         >
-          {/* Specular Glare */}
+          {/* Real Specular Glare & Lighting Plane */}
           <div
             className="pointer-events-none absolute inset-0 z-30 transition-opacity duration-200 rounded-2xl"
             style={{
@@ -269,13 +272,13 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
           {/* Holographic Scanline Overlay */}
           <div className="pointer-events-none absolute inset-0 z-20 opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px]" />
 
-          {/* Tech Brackets */}
+          {/* Holographic Corner Tech Brackets */}
           <div className="pointer-events-none absolute top-3 left-3 w-4 h-4 border-t-2 border-l-2 border-[#00f0ff] z-30" />
           <div className="pointer-events-none absolute top-3 right-3 w-4 h-4 border-t-2 border-r-2 border-[#00f0ff] z-30" />
           <div className="pointer-events-none absolute bottom-3 left-3 w-4 h-4 border-b-2 border-l-2 border-[#00f0ff] z-30" />
           <div className="pointer-events-none absolute bottom-3 right-3 w-4 h-4 border-b-2 border-r-2 border-[#00f0ff] z-30" />
 
-          {/* Top HUD Status Bar */}
+          {/* Top HUD Status Bar (Elevated in 3D: Z = 35px) */}
           <div
             style={{ transform: "translateZ(35px)", transformStyle: "preserve-3d" }}
             className="flex items-center justify-between px-3 py-2 z-30 border-b border-[#22222d] bg-[#14141d]/90 backdrop-blur-md rounded-t-xl"
@@ -303,7 +306,7 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
             </span>
           </div>
 
-          {/* Image Display Surface */}
+          {/* Image Display Surface (Z = 20px) */}
           <div
             style={{ transform: "translateZ(20px)", transformStyle: "preserve-3d" }}
             className="relative flex-1 my-2 rounded-xl overflow-hidden bg-[#0c0c10] flex items-center justify-center border border-[#1e1e26]"
@@ -318,6 +321,7 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
                 }}
               />
             ) : (
+              /* High-Tech Student Avatar Placeholder if image not loaded yet */
               <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-[#14141c] to-[#0c0c12]">
                 <div className="relative mb-4 p-5 rounded-full bg-[#181822] border border-[#2b2b3b] shadow-inner">
                   <User size={56} className="text-[#00f0ff]" />
@@ -359,10 +363,11 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
               </div>
             )}
 
+            {/* Depth Ambient Rim Light (Gradient from bottom) */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#111116] via-[#111116]/60 to-transparent z-10" />
           </div>
 
-          {/* Bottom HUD Metadata Panel */}
+          {/* Bottom HUD Metadata Panel (Elevated in 3D: Z = 45px) */}
           <div
             style={{ transform: "translateZ(45px)", transformStyle: "preserve-3d" }}
             className="px-3.5 py-3 z-30 bg-[#151520]/95 backdrop-blur-md rounded-b-xl border-t border-[#252533]"
@@ -432,7 +437,7 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
                 <button
                   type="button"
                   onClick={downloadForVercel}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#1c1c28] hover:bg-[#252538] text-[#00f0ff] hover:text-white border border-[#00f0ff]/30 transition-all cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#1c1c28] hover:bg-[#252538] text-[#00f0ff] hover:text-white border border-[#00f0ff]/30 transition-all cursor-pointer"
                   title="Download as portrait.png to paste into public/images/ for permanent Vercel deployment"
                 >
                   <Download size={13} />
@@ -463,16 +468,16 @@ export function PortraitFrame3D({ className = "", showControls = true }: Portrai
               </button>
             </div>
           ) : (
-            <div className="flex items-center gap-2.5 text-xs font-mono">
-              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#13131c] border border-[#232332] text-[#888898]">
+            <div className="flex flex-wrap items-center justify-center gap-2 text-[11px] sm:text-xs font-mono">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#13131c] border border-[#232332] text-[#888898]">
                 <ShieldCheck size={13} className="text-emerald-400 shrink-0" />
-                <span>Tamper-Proof Portrait · Anirban Bhowmik</span>
+                <span>Tamper-Proof Portrait · Anirban</span>
               </div>
 
               <button
                 type="button"
                 onClick={() => setShowAuthModal(true)}
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#181824] hover:bg-[#222232] text-[#a0a0b8] hover:text-white border border-[#29293d] transition-all cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#181824] hover:bg-[#222232] text-[#a0a0b8] hover:text-white border border-[#29293d] transition-all cursor-pointer"
                 title="Enter secret owner passkey to edit or upload portrait"
               >
                 <Lock size={12} className="text-orange-400" />

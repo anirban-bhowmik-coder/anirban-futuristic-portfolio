@@ -345,49 +345,6 @@ export function Footer3D({ onOpenResume }: Footer3DProps) {
           </div>
         </div>
 
-        {/* QUICK CONNECTIONS & ACTIONS */}
-        <div className="mt-16 pt-12 border-t border-[#1f1f2e] grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-6 space-y-3">
-            <h4 className="text-xl font-bold font-mono tracking-tight text-white">
-              CONNECT &amp; EXPLORE FURTHER
-            </h4>
-            <p className="text-xs sm:text-sm text-[#9999a4] leading-relaxed max-w-xl">
-              Always open to discussing AI systems, kinetic UI design, research opportunities,
-              and innovative engineering collaborations.
-            </p>
-          </div>
-
-          <div className="lg:col-span-6 flex flex-wrap items-center justify-start lg:justify-end gap-3">
-            <a
-              href={`mailto:${portfolioData.email}`}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#161622] hover:bg-[#222232] text-white border border-[#2e2e42] text-xs font-mono font-semibold transition-all hover:border-[#00f0ff]"
-            >
-              <Mail size={15} className="text-[#00f0ff]" />
-              <span>{portfolioData.email}</span>
-            </a>
-
-            <a
-              href={portfolioData.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#161622] hover:bg-[#222232] text-white border border-[#2e2e42] text-xs font-mono font-semibold transition-all hover:border-[#00f0ff]"
-            >
-              <Github size={15} className="text-[#00f0ff]" />
-              <span>github.com/anirban-bhowmik-coder</span>
-            </a>
-
-            {onOpenResume && (
-              <button
-                onClick={onOpenResume}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#00f0ff] hover:bg-[#3bf5ff] text-[#111114] text-xs font-mono font-bold transition-all shadow-lg shadow-[#00f0ff]/20"
-              >
-                <Award size={15} />
-                <span>INSPECT VERIFIED RESUME</span>
-              </button>
-            )}
-          </div>
-        </div>
-
         {/* BOTTOM LEGAL & INTEGRITY ROW */}
         <div className="mt-16 pt-8 border-t border-[#181824] flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-[#666675]">
           <div className="flex items-center gap-2">
